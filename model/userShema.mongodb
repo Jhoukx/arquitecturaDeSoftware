@@ -1,0 +1,218 @@
+db.createCollection("User", {
+    capped: true,
+    size: 15000,
+    max: 20,
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            additionalProperties: false,
+            required: ['_id', 'id_user', 'name', 'surname', 'address', 'phone_number', 'email', 'password'],
+            properties: {
+                _id: {
+                    bsonType: 'objectId'
+                },
+                id_user: {
+                    bsonType: 'int',
+                    description: 'id_user must be of type int'
+                },
+                name: {
+                    bsonType: 'string',
+                    description: 'name must be of type string'
+                },
+                surname: {
+                    bsonType: 'string',
+                    description: 'surnaname must be of type string'
+                },
+                address: {
+                    bsonType: 'string',
+                    description: 'address must be of type string'
+                },
+                phone_number: {
+                    bsonType: 'string',
+                    description: 'phone_number must be of type string'
+                },
+                email: {
+                    bsonType: 'string',
+                    description: 'email must be of type string'
+                },
+                password: {
+                    bsonType: 'string',
+                    description: 'password must be of type string'
+                }
+            }
+        }
+    }
+})
+db.User.insertMany([
+    {
+        id_user: Number(nextID('User')),
+        name: "John",
+        surname: "Doe",
+        address: "123 Main St",
+        phone_number: "555-1234",
+        email: "johndoe@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Jane",
+        surname: "Smith",
+        address: "456 Elm St",
+        phone_number: "555-5678",
+        email: "janesmith@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Michael",
+        surname: "Johnson",
+        address: "789 Oak St",
+        phone_number: "555-9012",
+        email: "michaeljohnson@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Emily",
+        surname: "Brown",
+        address: "321 Pine St",
+        phone_number: "555-3456",
+        email: "emilybrown@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "David",
+        surname: "Wilson",
+        address: "654 Cedar St",
+        phone_number: "555-7890",
+        email: "davidwilson@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Jessica",
+        surname: "Taylor",
+        address: "987 Maple St",
+        phone_number: "555-2345",
+        email: "jessicataylor@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Daniel",
+        surname: "Anderson",
+        address: "234 Birch St",
+        phone_number: "555-6789",
+        email: "danielanderson@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Sophia",
+        surname: "Thomas",
+        address: "567 Spruce St",
+        phone_number: "555-0123",
+        email: "sophiathomas@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Matthew",
+        surname: "Harris",
+        address: "890 Willow St",
+        phone_number: "555-4567",
+        email: "matthewharris@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Olivia",
+        surname: "Clark",
+        address: "123 Oak St",
+        phone_number: "555-8901",
+        email: "oliviaclark@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Andrew",
+        surname: "Lewis",
+        address: "456 Pine St",
+        phone_number: "555-2345",
+        email: "andrewlewis@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Isabella",
+        surname: "Lee",
+        address: "789 Birch St",
+        phone_number: "555-6789",
+        email: "isabellalee@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Ethan",
+        surname: "Hall",
+        address: "234 Cedar St",
+        phone_number: "555-0123",
+        email: "ethanhall@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Mia",
+        surname: "Moore",
+        address: "567 Maple St",
+        phone_number: "555-4567",
+        email: "miamoore@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "James",
+        surname: "Walker",
+        address: "890 Elm St",
+        phone_number: "555-8901",
+        email: "jameswalker@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Ava",
+        surname: "White",
+        address: "123 Spruce St",
+        phone_number: "555-2345",
+        email: "avawhite@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Benjamin",
+        surname: "Green",
+        address: "456 Willow St",
+        phone_number: "555-6789",
+        email: "benjamingreen@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "Charlotte",
+        surname: "Baker",
+        address: "789 Oak St",
+        phone_number: "555-0123",
+        email: "charlottebaker@example.com",
+        password: 'secret123',
+    },
+    {
+        id_user: Number(nextID('User')),
+        name: "William",
+        surname: "King",
+        address: "234 Pine St",
+        phone_number: "555-4567",
+        email: "williamking@example.com",
+        password: 'secret123',
+    }
+]);
