@@ -1,4 +1,4 @@
-import { con } from '../../config/connection/atlas.js';
+import { con } from '../../../config/connection/atlas.js';
 
 const db = await con();
 const cita = db.collection('medico');

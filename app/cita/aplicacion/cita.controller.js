@@ -1,14 +1,11 @@
-import { con } from "../../config/connection/atlas.js";
-
-const db = await con();
-const cita =  db.collection('cita');
+import { getAllCitas } from "../infraestructura/cita.mongodb.js";
 
 const getAll = async (req, res) => {
     try {
-        let result = await cita.find().sort({ fecha: 1 }).toArray();
+        let result = await getAllCitas();
         res.json(result);
     } catch (error) {
-        res.status(404).json({status:404,message:'Couldn´t find cita error'})
+        res.status(404).json({ status: 404, message: 'Couldn´t find cita error' })
     }
 }
 
@@ -19,7 +16,7 @@ const getPaciente = async (req, res) => {
     } catch (error) {
         res.status(404).json({ status: 404, message: 'Couldn´t find a cita from that usuario' })
     }
-} 
+}
 
 const getMedico = async (req, res) => {
     try {
@@ -67,4 +64,4 @@ const getMedico = async (req, res) => {
         res.status(404).json({ status: 404, message: 'Couldn´t find' })
     }
 }
-export { getAll,getPaciente,getMedico}
+export { getAll, getPaciente, getMedico }

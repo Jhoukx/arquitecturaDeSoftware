@@ -1,8 +1,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
-import appUsuario from './app/routes/usuario.routes.js';
-import appCita from './app/routes/cita.routes.js';
-import appMedico from './app/routes/medico.routes.js';
+import appUsuario from './app/usuario/aplicacion/usuario.routes.js';
+import appCita from './app/cita/aplicacion/cita.routes.js';
+import appMedico from './app/medico/aplicacion/medico.routes.js';
 dotenv.config();
 
 const app = express();
