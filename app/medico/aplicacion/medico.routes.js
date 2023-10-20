@@ -1,8 +1,8 @@
 import { Router } from "express";
-import { getEspecialidad } from './medico.controller.js'
+import { getEspecialidad,getMedicos } from './medico.controller.js'
 
 const appMedico = Router();
 
-appMedico.get('/', getEspecialidad);
-
+appMedico.get('/especialidad/:value', getEspecialidad);
+appMedico.get('/', getMedicos);
 export default appMedico;
