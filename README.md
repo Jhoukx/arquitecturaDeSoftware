@@ -65,7 +65,7 @@ Los estilos arquitectónicos son los de más alto nivel, y sirve como  base para
 
   El acoplamiento es nivel de dependencia que existe entre dos unidades de software, es decir, indica hasta qué grado una unidad de software puede funcionar sin recurrir a la otra. Cuando el nivel de dependencia es alto se dice que tiene un alto acoplamiento.
   
-- ##### Acoplamiento
+- ##### Cohesión
   
   La cohesión mide que tan relacionados están las unidades de software  entre sí, buscando que todas las unidades de software busquen cumplir un único objetivo o funcionalidad.
   
@@ -76,6 +76,8 @@ Los estilos arquitectónicos son los de más alto nivel, y sirve como  base para
   Es en realidad de unión de 5 principios que para muchos son los más importantes de todos, este acrónimo fue introducido por primera vez a principios de la década del 2000 por Robert C. Martin (mejor conocido por muchos como “el tío Bob”). El acrónimo SOLID hace referencia a:
 
 <img src="https://media.licdn.com/dms/image/D4D12AQF4-ItMunO2Ww/article-cover_image-shrink_720_1280/0/1668786184657?e=2147483647&v=beta&t=Dyb5L8_Ong1E4Nn00ak5-XS8tM7-kF5mrtj4ZdXF_-w" style="zoom:100%">
+
+
 
 ------
 
