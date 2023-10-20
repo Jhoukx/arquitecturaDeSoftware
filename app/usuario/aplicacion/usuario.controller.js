@@ -1,4 +1,4 @@
-import { getAllUsuarios } from "../infraestructura/usuario.mongodb";
+import { getAllUsuarios } from "../infraestructura/usuario.mongodb.js";
 
 
 const getAll = async (req, res) => {
