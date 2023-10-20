@@ -77,6 +77,27 @@ Los estilos arquitectónicos son los de más alto nivel, y sirve como  base para
 
 <img src="https://media.licdn.com/dms/image/D4D12AQF4-ItMunO2Ww/article-cover_image-shrink_720_1280/0/1668786184657?e=2147483647&v=beta&t=Dyb5L8_Ong1E4Nn00ak5-XS8tM7-kF5mrtj4ZdXF_-w" style="zoom:100%">
 
+### Arquitectura hexagonal
+
+Para entender la arquitectura hexagonal se debe entender su  enfoque de diseño de software, que busca aislar el núcleo de una  aplicación del entorno externo y de los detalles de implementación. El objetivo principal de esta arquitectura es lograr una alta  modularidad, flexibilidad y facilidad de pruebas en una aplicación.
+
+#### Componentes clave
+
+- **Nucleo de la aplicación**:  Este es el centro de la arquitectura hexagonal y contiene la lógica de  negocio de la aplicación. Aquí se definen los casos de uso y las reglas  de negocio
+- **Puertos:** Definen cómo interactuar con el núcleo de la aplicación. Los puertos solo definen una implementacion concreta, ya sea crear un usuario o eliminar un usuario. Ejecuta el bloque de código que realiza esa tarea pero esta no está explicitamente.
+- **Adaptadores:** Los adaptadores son responsables de convertir los datos enviados desde el nucleo al formato requerido por los puertos.
+
+#### Ejemplo 
+
+**Sin estructura hexagonal:**
+
+<img src="./public//NoHexagonal.PNG" style="zoom:100%">
+
+**Con estructura hexagonal**
+
+<img src="./public//Hexagonal.PNG" style="zoom:100%">
+
+En este ejemplo se ve una estructuración de carpetas más extenso que la anterior, pero justamente esto es necesario para caracteristicas como el desacoplamiento,flexibilidad,escalabilidad y facilidad de pruebas unitarias.
 
 
 ------
